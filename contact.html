@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact </title>
+   
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+       
+        <ul>
+          <li><a class="" href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+  
+          <li><a class="active" href="contact.html"> <i class="fa fa-envelope"></i> Contact</a></li>
+        </ul>
+      </nav>
+      <section></section>
+    <div class="main">
+            <h1>
+                Contact
+            </h1> <br>
+
+        <form action="" class="contact" method="POST">
+
+            <label for="name">
+                Nom: <br>
+                <input type="text" class="name" id="name"
+                 id="name">
+            </label> <br> <br>
+
+            <label for="name">
+                Objet: <br>
+                <input type="text" id="subject" class="subject" id="subject">
+            </label> <br> <br>
+
+            <label for="name">
+                Message: <br>
+                <textarea name="" id="message" class="message">
+
+                </textarea>
+            </label> <br>
+
+            <button type="submit">
+                Valider
+            </button>
+
+            
+        </form>
+    </div>
+
+    <script>
+        let name = document.getElementById("name");
+        let message = document.getElementById("message");
+        let subject = document.getElementById("subject");
+          
+            const list = [name, subject, message];
+            list.forEach((item, index)=>{
+               (index, item).addEventListener("keyup", myFunction);
+             
+                function myFunction() {
+                var value = (index, item).value
+
+                let size = (`${value.length}`);
+
+               // console.log(size);
+
+               if(size < 5){
+                (index, item).style.border = '2px solid red';
+               } else{
+                (index, item).style.border = '2px solid green';
+               }
+                }
+            });
+    </script>
+</body>
+</html>
